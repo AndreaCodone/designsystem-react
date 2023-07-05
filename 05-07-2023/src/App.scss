@@ -1,0 +1,103 @@
+// @import "./scss/variables/colors.scss";
+@import "./scss/typography/all.scss";
+@import "./scss/layouts/all.scss";
+@import "./scss/helpers/all.scss";
+@import "./scss/components/ui/buttons.scss";
+
+body {
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: pink;
+  // // background-color: $colorBackground;
+  // @include flexbox();
+  // @include justify-content(center);
+  // @include align-items(center);
+  // background-color: colorShade($primary, 40%);
+}
+
+.Button {
+  background-color: yellow;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+}
+
+.row-g {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.elevationtest {
+  box-shadow: $elevationSmall;
+  transition: $elevationAnim;
+
+  &:hover {
+    box-shadow: $elevationLarge;
+  }
+
+  &::after {
+  }
+
+  &.classe2 {
+    background-color: yellow;
+  }
+
+  &__container {
+    background-color: red;
+
+    &--light {
+      background-color: green;
+    }
+  }
+}
+
+ul {
+  color: yellow;
+  font-size: 11px;
+  li {
+    font-size: rem(37px);
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  @include xs {
+    background: purple;
+    @include size(40px, 100px);
+  }
+
+  @include sm {
+    background: yellow;
+    @include size(40rem, 100px);
+  }
+
+  @include md {
+    background: green;
+  }
+
+  @include lg {
+    background: violet;
+  }
+
+  @include xl {
+    background: orange;
+  }
+}
