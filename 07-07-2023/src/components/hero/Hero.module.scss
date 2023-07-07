@@ -1,0 +1,31 @@
+.Hero {
+  position: relative;
+}
+
+.swiper {
+  height: 100vh;
+  width: 100%;
+  border-radius: 8px;
+  margin: 80px 0px 20px 0px;
+}
+
+div img {
+  border-radius: 8px;
+}
+
+.navigation {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  text-align: center;
+
+  &.prevButton {
+    left: 0;
+  }
+  &.nextButton {
+    right: 0;
+  }
+}
